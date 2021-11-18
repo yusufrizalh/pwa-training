@@ -58,4 +58,5 @@ async function ambilGambar() {
 
 ambilGambar().catch((error) => {
   console.log("There is a problem with your fetch! " + error.message);
+  console.log("test");
 });
