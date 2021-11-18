@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Challenge 1</title>
+
+    <style>
+        .container {
+            background-color: #2196ff;
+            padding: 12px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 10px 10px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "HEADER HEADER HEADER HEADER"
+                "SIDE CONTENT CONTENT CONTENT"
+                "SIDE CONTENT CONTENT CONTENT"
+                "SIDE CONTENT CONTENT CONTENT"
+                "FOOTER FOOTER FOOTER FOOTER";
+        }
+
+        .container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 28px;
+        }
+
+        .HEADER {
+            grid-area: HEADER;
+        }
+
+        .SIDE {
+            grid-area: SIDE;
+        }
+
+        .FOOTER {
+            grid-area: FOOTER;
+        }
+
+        .CONTENT {
+            grid-area: CONTENT;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="HEADER">HEADER</div>
+        <div class="SIDE">SIDE</div>
+        <div class="FOOTER">FOOTER</div>
+        <div class="CONTENT">CONTENT</div>
+    </div>
+</body>
+
+</html>
